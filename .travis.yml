@@ -9,20 +9,20 @@ python:
 - '3.5'
 - '3.6'
 script:
-  - pip install codecov
-  - python setup.py sdist
-  - python setup.py test
-  - coverage run --source=get_docker_secret --branch setup.py test
-  - coverage report -m
-  - codecov
+- pip install codecov
+- python setup.py sdist
+- python setup.py test
+- coverage run --source=get_docker_secret --branch setup.py test
+- coverage report -m
+- codecov
 jobs:
   include:
-    - stage: deploy
-      script: skip
-      deploy:
-        provider: pypi
-        user: Fischerfredl
-        password:
-          secure: YnN2sonM2ELcNBe44RP2aBp1BrnTehe6UOtPEU1gwDHo4UEj6LDdTaJ6rvkOcaU0iMRiWaPhwv0iGTpzULs/xXcXJG6qoghOEh3W73RwZMDTzlFzauoxDve2TVXmAaMC2IIkhfpq893Nosm/WgPILq4r65q4AXrdHtCq5nEKoBhRCvY+eT5tYt8RfD5eGHOzLhhpajQIp4l6ILcxGZuBVl5DQyY5TrbUXzKefMzzApipJ0xO7g+/Bqwz5MuM13B1ajKja+Yk3QDEyvdKkreilU+ClVeQu8OSRVjFnfcHJVX53r8IlzMERCP5lU5DKkSe8MB+N8kE6+2F4VmTrJPTPBqanF/QfHPNeKIAVa+f58D5Qe/g/B+FGXq5IT//VkNLTzo7ieA6uZqcmWa40KJ2ZgEF4zTvqXG6a0XF4dN2zp1ItmarhxTaYQ/S5SNKU0GaRt8XJshRwmJfiWWwMi5QIJPjnvVM0bPTna+PiRYJ08IiM3zS6xBzbXgt+VVB0PsDsREySOYIJKXZMo5dM9YZBe6QxWV8ZBfKmfmRAAu+jWr2F1H7xBnPl/ibyQDSD11QXStUaEPCbQceB6d11rlGCrpFd8dD1VeffAHGpGrDRsb7Fbnnu8pa44+M/+4ooi79QptKahCyrI8qRdniXio12rj5VAELCR416c/gQMMCSUU=
-        on:
-          tags: true
+  - stage: deploy
+    script: skip
+    deploy:
+      provider: pypi
+      user: Fischerfredl
+      password:
+        secure: CvUkW3Zzy+oJhWXDaQ/bJdVIByYgDKaqaujy0T0dFgsLzcJ+ukBZxXMDKvFh1RquhruSPk2h4xb6PitVx5PLSOxSSzB1nBjYL+moDr8IAJiGhNflC5HBm1oXiBW3rSKpHTCEESSE8le43cPN97gOmAhwa5Q35C4KW01HkJOqfys/U06+731V7LKv6J1Mxdyj4RL9PCi6IINsZINLIU0mvPTFnqZY5EAH++D9h8k/ax/xu1Bae3Gd+fwbms41jCcGnkEq5U1fE+X97Xd8H1J95hg+CR9q+8Yj+buXXLU3QBfGzJKE9y5p8IidY4jQjZWTR7hZDM0Hs72/mwhBPLuPXP5QeOXPx1VWXwsSH1IppUCOHQPT6mTlz4pm7EDcaAB7Ji/+2Cv5cdGk9cnGVSxYBuMIsXhjBubdLsql9HqCx/QR5oZg5r0MHPnAUY1T+tD58GXj4IXn8TdXHuUwZkxRw2vYpQdH9ag+RuFp4i9RCP1VCC/TNHqDSDi9A++taRCS9ytWmIjawN+PtSRQpC1N7FU653Lnk1iKaH6FZ7RFUpBcwgzrWm3lVYuTWJ6LvPX9KCE6GaMCwiIhgogaFAwj/xYD24HktX+I64GiFh1yy8LyCqC6BrRFroUObj2yafKGi+ejOMuot4bnJVWVmAESTaLmxM3wTlOTttPDJG3Aesw=
+      on:
+        tags: true
