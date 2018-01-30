@@ -1,0 +1,10 @@
+/.idea
+*.pyc
+venv
+
+/dist
+/*.egg-info
+/.eggs
+
+/htmlcov
+.coverage

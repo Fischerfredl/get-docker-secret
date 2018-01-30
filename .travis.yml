@@ -1,0 +1,28 @@
+notifications:
+  email:
+    on_success: never
+    on_failure: always
+language: python
+python:
+- '2.7'
+- '3.4'
+- '3.5'
+- '3.6'
+script:
+  - pip install codecov
+  - python setup.py sdist
+  - python setup.py test
+  - coverage run --source=get_docker_secret --branch setup.py test
+  - coverage report -m
+  - codecov
+jobs:
+  include:
+    - stage: deploy
+      script: skip
+      deploy:
+        provider: pypi
+        user: Fischerfredl
+        password:
+          secure: YnN2sonM2ELcNBe44RP2aBp1BrnTehe6UOtPEU1gwDHo4UEj6LDdTaJ6rvkOcaU0iMRiWaPhwv0iGTpzULs/xXcXJG6qoghOEh3W73RwZMDTzlFzauoxDve2TVXmAaMC2IIkhfpq893Nosm/WgPILq4r65q4AXrdHtCq5nEKoBhRCvY+eT5tYt8RfD5eGHOzLhhpajQIp4l6ILcxGZuBVl5DQyY5TrbUXzKefMzzApipJ0xO7g+/Bqwz5MuM13B1ajKja+Yk3QDEyvdKkreilU+ClVeQu8OSRVjFnfcHJVX53r8IlzMERCP5lU5DKkSe8MB+N8kE6+2F4VmTrJPTPBqanF/QfHPNeKIAVa+f58D5Qe/g/B+FGXq5IT//VkNLTzo7ieA6uZqcmWa40KJ2ZgEF4zTvqXG6a0XF4dN2zp1ItmarhxTaYQ/S5SNKU0GaRt8XJshRwmJfiWWwMi5QIJPjnvVM0bPTna+PiRYJ08IiM3zS6xBzbXgt+VVB0PsDsREySOYIJKXZMo5dM9YZBe6QxWV8ZBfKmfmRAAu+jWr2F1H7xBnPl/ibyQDSD11QXStUaEPCbQceB6d11rlGCrpFd8dD1VeffAHGpGrDRsb7Fbnnu8pa44+M/+4ooi79QptKahCyrI8qRdniXio12rj5VAELCR416c/gQMMCSUU=
+        on:
+          tags: true
