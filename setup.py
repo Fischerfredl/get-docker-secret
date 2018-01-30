@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='get-docker-secret',
-    version='0.0.1',
+    version='1.0.0',
     description='Utility function to fetch docker secrets/envvars.',
     long_description=readme(),
     url='https://github.com/fischerfredl/get-docker-secret',
