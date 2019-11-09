@@ -14,7 +14,7 @@ The function also provides the possibility to automatically cast the value or sp
 Following assumptions are being made (params):
 * ```autocast_name=True```: secrets are lower-case, envvars upper-case. automatic conversion of name can be switched off via autocast_name=False
 * ```cast_to=str```: fill in desired datatype. special case bool: 'True'/'true' will be True. 'False'/'false' will be False
-* ```envvar=True```: you want to fall back to envvar. can be switched of via envvar=False
+* ```getenv=True```: you want to fall back to envvar. can be switched of via getenv=False
 * ```default=None```
 * ```safe=True```: returns None if name not found or cast fails. If you want exceptions: safe=False
 * ```secrets_dir=/var/run/secrets```
