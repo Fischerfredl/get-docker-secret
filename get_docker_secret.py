@@ -29,7 +29,7 @@ def get_docker_secret(name, default=None, cast_to=str, autocast_name=True, geten
     # try to read from secret file
     try:
         with open(os.path.join(secrets_dir, name_secret), 'r') as secret_file:
-            value = secret_file.read()
+            value = secret_file.read().strip()
     except IOError as e:
         # try to read from env if enabled
         if getenv:
