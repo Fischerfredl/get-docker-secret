@@ -14,7 +14,7 @@ setup(
     long_description_content_type="text/markdown",
     url='https://github.com/fischerfredl/get-docker-secret',
     author='Alfred Melch',
-    author_email='alfred.melch@gmx.de',
+    author_email='dev@melch.pro',
     license='MIT',
     classifiers=[
         'License :: OSI Approved :: MIT License',
