@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 
 def readme():
-    with open('README.rst') as f:
+    with open('README.md') as f:
         return f.read()
 
 
@@ -11,6 +11,7 @@ setup(
     version='1.0.0',
     description='Utility function to fetch docker secrets/envvars.',
     long_description=readme(),
+    long_description_content_type="text/markdown",
     url='https://github.com/fischerfredl/get-docker-secret',
     author='Alfred Melch',
     author_email='alfred.melch@gmx.de',
