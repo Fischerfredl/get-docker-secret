@@ -39,6 +39,10 @@ not tested under windows
 
 ## Changelog
 
+### 1.0.2 - 2021-03-19
+
+- Fixed: Only strip trailing newlines from secrets file
+
 ### 1.0.1 - 2019-12-07
 
 - Fixed: Strip values read from file.

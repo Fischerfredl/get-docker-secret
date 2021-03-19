@@ -5,6 +5,7 @@ venv
 /dist
 /*.egg-info
 /.eggs
+/build
 
 /htmlcov
 .coverage

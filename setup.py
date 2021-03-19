@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='get-docker-secret',
-    version='1.0.1',
+    version='1.0.2',
     description='Utility function to fetch docker secrets/envvars.',
     long_description=readme(),
     long_description_content_type="text/markdown",
@@ -19,10 +19,10 @@ setup(
     classifiers=[
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7'
+        'Programming Language :: Python :: 3.8'
+        'Programming Language :: Python :: 3.9'
     ],
     keywords=['docker', 'secret', 'envvar', 'config'],
     py_modules=['get_docker_secret'],
