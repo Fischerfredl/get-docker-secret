@@ -1,7 +1,6 @@
 [![version](https://img.shields.io/pypi/v/get-docker-secret.svg)](https://pypi.python.org/pypi/get-docker-secret)
 [![license](https://img.shields.io/pypi/l/get-docker-secret.svg)](https://pypi.python.org/pypi/get-docker-secret)
 [![pyversions](https://img.shields.io/pypi/pyversions/get-docker-secret.svg)](https://pypi.python.org/pypi/get-docker-secret)
-[![pipeline status](https://travis-ci.org/Fischerfredl/get-docker-secret.svg?branch=master)](https://travis-ci.org/Fischerfredl/get-docker-secret)
 [![coverage](https://img.shields.io/codecov/c/github/fischerfredl/get-docker-secret.svg)](https://codecov.io/gh/Fischerfredl/get-docker-secret)
 
 # get-docker-secret
