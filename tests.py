@@ -92,6 +92,24 @@ class TestSecrets(unittest.TestCase):
         with self.assertRaises(ValueError):
             get_docker_secret('my_bool_key_false', cast_to=int, safe=False, secrets_dir=self.secrets_dir)
 
+    def test_trailing_whitespace(self):
+        self.write_secret('foo', 'bar ')
+        value = get_docker_secret('foo', secrets_dir=self.secrets_dir)
+        self.assertEqual(value, 'bar ')
+        self.remove_secret('foo')
+
+    def test_strip_trailing_newline(self):
+        self.write_secret('foo', 'bar\n')
+        value = get_docker_secret('foo', secrets_dir=self.secrets_dir)
+        self.assertEqual(value, 'bar')
+        self.remove_secret('foo')
+
+    def test_multiline_secrets(self):
+        self.write_secret('foo', 'bar\nbaz')
+        value = get_docker_secret('foo', secrets_dir=self.secrets_dir)
+        self.assertEqual(value, 'bar\nbaz')
+        self.remove_secret('foo')
+
 
 class TestEnvvar(unittest.TestCase):
     def setUp(self):
