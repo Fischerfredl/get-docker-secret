@@ -4,7 +4,7 @@ root = os.path.abspath(os.sep)
 
 
 def get_docker_secret(name, default=None, cast_to=str, autocast_name=True, getenv=True, safe=True,
-                      secrets_dir=os.path.join(root, 'var', 'run', 'secrets')):
+                      secrets_dir=os.path.join(root, 'run', 'secrets')):
     """This function fetches a docker secret
 
     :param name: the name of the docker secret
