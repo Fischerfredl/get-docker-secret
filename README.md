@@ -38,6 +38,11 @@ not tested under windows
 
 ## Changelog
 
+
+### 2.0.0 - 2023-07-23
+
+- Changed: Use canonical `/run/secrets` directory to read secrets from (changed from `/var/run/secrets`) (PR #4) (Thanks @ThorpeJosh)
+
 ### 1.0.2 - 2021-03-19
 
 - Fixed: Only strip trailing newlines from secrets file
