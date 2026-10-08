@@ -21,7 +21,7 @@ def get_docker_secret(name, default=None, cast_to=str, autocast_name=True, geten
 
     # cast name if autocast enabled
     name_secret = name.lower() if autocast_name else name
-    name_env = name.upper() if autocast_name else name
+    name_env = name.upper().replace('-', '_') if autocast_name else name
 
     # initiallize value
     value = None
